@@ -1,0 +1,15 @@
+<div *ngIf="searchPatient$ | async as patient">
+  {{ patient.resourceType }}<br />
+  {{ patient.name }}<br />
+  {{ patient.id }}<br />
+  {{ patient.birthDate }}<br />
+  {{ patient.gender }}<br />
+  {{ patient.address }}
+</div>
+
+<div *ngIf="searchPractitioner$ | async as Practitioner">
+  {{ Practitioner.resourceType }}<br />
+  {{ Practitioner.name }}<br />
+  {{ Practitioner.id }}<br />
+  {{ Practitioner.Telecom }}<br />
+</div>

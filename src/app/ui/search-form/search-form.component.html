@@ -1,0 +1,16 @@
+<!-- implement search form here -->
+<form [formGroup]="searchForm" class="searchForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <input matInput formControlName="searchField" class="search-input" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Filter</mat-label>
+    <mat-select>
+      <mat-option> Patients + Practitioners (Patient/Ärzte) </mat-option>
+      <mat-option> Patients (Patient) </mat-option>
+      <mat-option> Practitioners (Ärzte) </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="accent" type="submit" [disabled]="!searchForm.valid">suchen</button>
+</form>
